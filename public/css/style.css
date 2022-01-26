@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgba(245, 238, 238, 0.89);
+}
+
+.container-fluid{
+    background: linear-gradient(rgba(7, 6, 6, 0.2),rgba(7, 6, 6, 0.2)), blue;
+    /* background: url('/public/assests/bg3.jpg'); */
+    background-size: cover; 
+    background-position: center;
+    height: 45vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading{
+    font-weight: 700;
+    font-size: 2.5rem; 
+    font-family: 'Patua One', cursive;
+    color: white;
+}
+
+.heading:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.cont2{
+    background: rgba(41, 41, 41, 0.247);
+    padding: 3rem 5rem 3rem;
+}
+
+.inner-cont{
+    text-align: right;
+}
+
+.btn{
+    background-color: #2D4263;
+    color: white;
+    border: 2px solid #2D4263;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #2D4263;
+    border: 2px solid #2D4263;
+}
+
+@media only screen and (max-width: 768px){
+    .inner-cont{
+        margin-top: 0.5rem;
+        text-align: left;
+     }
+    .search-bton{
+        margin-top: 0.4rem;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .cont2{
+        padding: 1rem 2rem 1rem;
+    } 
+    .inner-cont{
+        margin-top: 0.5rem;
+        text-align: left;
+     }
+}
+
+img{
+    max-width: 100%;
+    transition: all 0.7s ;
+}
+
+.Hover-effect:hover{
+    transform:  translateY(-3px) scale(1.01);
+
+}
+.Hover-effect:hover img{
+    transform:  translateY(-5px) scale(1.02);
+}
+h3{
+    font-size: 1.55rem;
+}
+h2{
+    font-size: 1.55rem;
+}
+.news-container{
+    margin-bottom: 69px;
+    padding: 0 1rem;
+    padding-top: 92px;
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 2rem;
+
+}
+.news-box{
+    transition: all 0.3s ;
+    text-decoration: none;
+    color: rgb(29, 25, 25);
+    background-color: white;
+    padding: 20px;
+}
+
+.news-box:hover{
+    text-decoration: none;
+    color: rgb(29, 25, 25);;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16), 0 3px 3px rgba(0,0,0,0.23);
+    border: 2px solid #2D4263;
+}
+
+
+.searc-bar{
+    justify-content: center;
+}
+
+.Hover-effect {
+    position: relative;
+}
+
+.Hover-effect::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+
+
+.Hover-effect:hover::after {
+    transform: scale(1, 1);
+}
+
