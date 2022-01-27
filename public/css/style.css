@@ -5,8 +5,7 @@ body{
 }
 
 .container-fluid{
-    /* background-image: url('/public/assests/bg3.jpg'); */
-    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    background-image:linear-gradient(rgba(7, 6, 6, 0.336),rgba(7, 6, 6, 0.288)),url('/assests/bg1.jpg');
     background-size: cover; 
     background-position: center;
     height: 45vh;
@@ -30,13 +29,25 @@ body{
     text-decoration: none;
 }
 
-.cont2{
-    background: rgba(34, 34, 34, 0.247);
-    padding: 3rem 5rem 3rem;
+.navbar{
+    background: rgba(0, 0, 0, 0.897);
+}
+.navbar-nav .nav-item {
+    margin: 1rem;
 }
 
-.inner-cont{
-    text-align: right;
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon{
+    color: white;
+    border: none;
 }
 
 .btn{
@@ -52,13 +63,30 @@ body{
     border: 2px solid #2D4263;
 }
 
+
+@media only screen and (min-width: 769px){
+    .navbar .navbar-nav .nav-item>.nav-link:hover {
+        color: rgb(247, 232, 232);
+        transition: 0.35s;
+    }
+    .navbar .navbar-nav .nav-link::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: rgb(247, 232, 232);
+        transition:all 0.35s ease;
+    }
+    
+    .navbar .navbar-nav .nav-link:hover::after{
+        width: 100%;
+        transition:all 0.35s ease;
+    }
+}
+
 @media only screen and (max-width: 768px){
-    .inner-cont{
-        margin-top: 0.5rem;
-        text-align: left;
-     }
-    .search-bton{
-        margin-top: 0.4rem;
+    .navbar-nav .nav-item {
+        margin:0.1rem;
     }
 
     .heading
@@ -68,14 +96,9 @@ body{
 }
 
 @media only screen and (max-width: 575px){
-    .cont2{
-        padding: 1rem 2rem 1rem;
-    } 
-    .inner-cont{
-        margin-top: 0.5rem;
-        text-align: left;
-     }
-
+    .navbar-nav .nav-item {
+        margin: 0.1rem;
+    }
      .heading
     {
         font-size: 2rem; 
